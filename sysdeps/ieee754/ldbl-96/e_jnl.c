@@ -141,6 +141,8 @@ __ieee754_jnl (int n, long double x)
 	      case 3:
 		temp = c - s;
 		break;
+	      default:
+		abort ();
 	      }
 	    b = invsqrtpi * temp / __ieee754_sqrtl (x);
 	  }
@@ -367,6 +369,8 @@ __ieee754_ynl (int n, long double x)
 	  case 3:
 	    temp = s + c;
 	    break;
+	  default:
+	    abort ();
 	  }
 	b = invsqrtpi * temp / __ieee754_sqrtl (x);
       }
